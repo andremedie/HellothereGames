@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>MasterQuiz</title>
+    <script>
+   function myFunction() {
+    var x = document.getElementById("myForm").name;
+    document.getElementById("competitor").innerHTML = "Welcome " + x;
+}
+</script>
+</head>
+<body>
+    <h1 id="Head1">Welcome to the Quiz</h1>
+    <div id="clickMe">Contiue <i class="fas fa-angle-double-right"></i></div>
+<div id="welCome">
+        <p>Are you ready for an epic Containerization Journey!?</p>
+        <p>Test your knowledge and find out!</p>
+    <div>Enter your nickname</div>
+        <form name="myForm" method="GET">
+        <input name=""></input>
+    </form>
+    <div id="clickMe2" onclick="formSubmit()">Continue <i class="fas fa-angle-double-right"></i></div>
+    
+</div>
+    <div id="QuizQuestions">
+        <div id="competitor"></div>
+        <p>Click "start quiz" and the quiz will begin😅.</p>
+        <button id="startquiz">start quiz</button> 
+        <div id="question"></div>
+        <div>
+            <h1 id="timer1"></h1>
+            <h1 id="timer2"></h1>
+            <h1 id="timer3"></h1>
+            <h1 id="timer"></h1>
+        </div>
+    </div>     
+                
+                
+               
+                
+                <script>
+                    var timer = 10000;
+                    var counter = 0;
+                    $("#welCome").hide();
+                    $("#QuizQuestions").hide();
+                questions =  [
+    {
+        "question": "Where does Santa come from?",
+        "ans1": "Finland",
+        "ans2": "Russia",
+        "ans3": "Africa"
+    },{
+        "question": "How do you feel when you have been drinking the day before?",
+        "ans1": "Not so good, or I mean Fantastic!",
+        "ans2": "Even Monkey cant drink",
+        "ans3": "The sun is shining"
+    },{
+        "question": "My name is:",
+        "ans1": "Fred",
+        "ans2": "Frankie",
+        "ans3": "Andre & Pedram"
+    },{
+        "question": "How do you feel when you have been drinking the day before?",
+        "ans1": "Not so good, or I mean Fantastic!",
+        "ans2": "Even Monkey cant drink",
+        "ans3": "The sun is shining"
+    },{
+        "question": "How do you feel when you have been drinking the day before?",
+        "ans1": "Not so good, or I mean Fantastic!",
+        "ans2": "Even Monkey cant drink",
+        "ans3": "The sun is shining"
+    }
+]   
+             $(document).ready(function(){   
+               
+                // $('#hideText').click(function(){
+                //     $('#welCome').hide();
+                //     $('#quizQuestions').show();
+                // });
+                function checktimer(){
+                    if(timer == 0){
+                        console.log("next question"); 
+                        $('#question').html(`<h1> ${questions[counter].question}</h1>`);
+                        
+                        $("#timer1").html(`<a>${questions[counter].ans3}</a>`);
+                        $("#timer2").html(`<a>${questions[counter].ans2}</a>`);
+                        $("#timer3").html(`<a>${questions[counter].ans1}</a>`);
+                        $("#timer").html(`Next Question`);
+                    }else{
+                      $("#question").text(timer/10000)
+                     $('#question').empty();
+                       
+                        $("#timer").html(timer/1000);
+                       // counter = counter + 1;
+                        setTimeout(checktimer,1000);
+                        timer = timer - 1000; 
+                        
+                    }  
+                }
+                
+                function quiz(i){
+                    
+                
+                            setTimeout(checktimer(),1000); 
+
+                }
+                
+$('#startquiz').click(function(){
+    
+    for(var i = 0; i < 4; i++); { 
+        $('#question').html(`<h1> ${questions[counter].question}</h1>`);
+
+                    
+        quiz(i);
+}
+});
+
+$('#clickMe').click(function(){
+    $("#welCome").show();
+        $("#Head1").hide();
+        $("#QuizQuestions").hide();
+        $("#clickMe").hide();
+});
+$('#clickMe2').click(function(){
+    $("#welCome").hide();
+        $("#Head1").hide();
+        $("#QuizQuestions").hide();
+        $("#clickMe").hide();
+        $("#clickMe2").hide();
+        $("#QuizQuestions").show();
+
+});
+
+
+
+            });
+                </script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,30 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 42px;
+}
+
+#Head1 {
+    
+    font-size: 128px;
+    
+}
+
+#clickMe #startquiz {
+   
+    font-size: 48px;
+}
+
+input {
+    text-align: center;
+    font-size: 48px;
+}
+
+#clickMe2 {
+   
+    font-size: 48px;
+}
+
+#timer {
+    font-size: 32px;
+}
