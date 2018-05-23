@@ -1,30 +1,115 @@
+html {
+    height: 100%;
+    width: 100%;
+}
 body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     text-align: center;
-    font-size: 42px;
+}
+
+.Valkommen {
+    font-size: 105px;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 300px;
 }
 
 #Head1 {
     
-    font-size: 128px;
+    font-size: 142px;
+    margin: 0px;
+    padding: 0px;
     
 }
 
-#clickMe #startquiz {
-   
-    font-size: 48px;
-}
 
-input {
+#clickMe , #clickMe4{
+    font-size: 30px;
+    color: #218fbf;
     text-align: center;
-    font-size: 48px;
+    padding: 0px;
+    padding-top: 35rem;
+    bottom: 0; right: 0; 
+
+    
+     -webkit-column-count: 1; /* Chrome, Safari, Opera */
+     -moz-column-count: 1; /* Firefox */
+     column-count: 1;
+ 
+     -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+     -moz-column-gap: 40px; /* Firefox */
+     column-gap: 30px;
+ 
 }
 
 #clickMe2 {
-   
-    font-size: 48px;
+    font-size: 30px;
+    color: #218fbf;
+    text-align: center;
+    padding: 0px;
+    padding-top: 5rem;
+    bottom: 0; right: 0; 
+
+    
+     -webkit-column-count: 1; /* Chrome, Safari, Opera */
+     -moz-column-count: 1; /* Firefox */
+     column-count: 1;
+ 
+     -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+     -moz-column-gap: 40px; /* Firefox */
+     column-gap: 30px;
 }
 
-#timer {
-    font-size: 32px;
+#clickMe3 {
+    font-size: 30px;
+    color: #218fbf;
+    text-align: center;
+    padding: 0px;
+    padding-top: 5px;
+    bottom: 0; right: 0; 
+
+    
+     -webkit-column-count: 1; /* Chrome, Safari, Opera */
+     -moz-column-count: 1; /* Firefox */
+     column-count: 1;
+ 
+     -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+     -moz-column-gap: 40px; /* Firefox */
+     column-gap: 30px;
+ 
+
+}
+
+#clickMe4 {
+    font-size: 30px;
+    color: #218fbf;
+    text-align: center;
+    padding: 0px;
+    padding-top: 25rem;
+    bottom: 0; right: 0; 
+
+    
+     -webkit-column-count: 1; /* Chrome, Safari, Opera */
+     -moz-column-count: 1; /* Firefox */
+     column-count: 1;
+ 
+     -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+     -moz-column-gap: 40px; /* Firefox */
+     column-gap: 30px;
+ 
+}
+
+.inputName {
+    font-size: 90px;
+}
+
+
+input {
+    text-align: center;
+    font-size: 42px;
+    border: black 1px solid;
+}
+
+#welCome , #welCome2 , #welCome3 , #welCome4 {
+    font-size: 56px;
 }
