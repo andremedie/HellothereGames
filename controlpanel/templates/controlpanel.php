@@ -7,7 +7,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/HellothereGames/css/controlpanel.css">
-	<script src="/HellothereGames/play/scripts/controlpanel.js" > </script>
+	<script src="/HellothereGames/controlpanel/scripts/controlpanel.js" > </script>
     <title>MasterQuiz</title>
     
 </head>
@@ -34,6 +34,6 @@ $n = 0;
 </div>
 <div class="control_q_container">
 <?php
-require($_SERVER['DOCUMENT_ROOT']."/HellothereGames/play/templates/questionPanel.php");
+require($_SERVER['DOCUMENT_ROOT']."/HellothereGames/controlpanel/templates/questionPanel.php");
 ?>
 </div>

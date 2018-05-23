@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>MasterQuiz</title>
+    <script>
+</script>
+</head>
+<body>
+    <div class="ramen">
+
+                <div><h2 class="Valkommen">Welcome to</h2></div>
+                <h1 id="Head1">Container-Q</h1></div>
+                <div class="hq1"><img src="">(HQ Picture)</img></div>
+                
+                <div id="welCome">
+                    <div><img class="hq2" src=""></img></div>
+                        <p>Ready for your <br> Containerization Journey!?</p>
+                        <p>Find out with our LIVE <br> trivia throw-down <br> to open Dockerdon!!</p>
+                        <p>Iternal fame and epic swag <br> hang in the balance!!!</p>
+                    <div>Create your nickname <br> to get started:</div>
+                        <form name="myForm" method="GET">
+                        <input class="inputName" name="" placeholder="SuperSteve27"></input>
+                    </form>
+                    
+                   
+                    </div>
+                    <br>
+                    <br>
+                 
+                  
+                    <div id="welCome2">
+                            <div><img class="hq2" src=""></img></div>
+                            <p>It's not time just yet, but <br> here's how it works:</p>
+                            <p>You'll have an opportunity <br> to answer a series of 12, <br> progressively harder 
+                                <br> multiple choice questions.</p>
+                                <br>
+                            <p>Get one wrong and you're <br> eliminated, but get them <br> all right and...</p>
+                            <br>
+                           
+
+                    </div>
+
+                    <div id="welCome3">
+                            <div><img class="hq2" src=""></img></div>
+                            <br>
+                            <br>
+                            <br>
+                        
+                            <p>REIGN SUPREME as <br> a Docker Container-Q <br>
+                            Champion, and win EPIC, <br> DOCKERCON BLACK <br> MARKET SWAG!</p> 
+                             
+                    </div>
+
+                    <div id="welCome4">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div><img class="hq1" src="">(HQ picture)</img></div>
+                            <p>Sit tight, <br> Container-Q is <br> starting soon!</p>        
+                    10, 9, 8, 7...
+                        </div>
+                    
+                        <div id="GameOn">
+
+                        </div>
+    
+                    <div id="clickMe"><i class="fas fa-chevron-circle-right fa-10x"></i></div>
+                <div id="clickMe2"><i class="fas fa-chevron-circle-right fa-10x"></i></div>
+                <div id="clickMe3"><i class="fas fa-chevron-circle-right fa-10x"></i></div>
+                <div id="clickMe4"><i class="fas fa-chevron-circle-right fa-10x"></i></div>
+                
+               
+                
+                <script>
+                    var timer = 10000;
+                    var counter = 0;
+                    $("#welCome").hide();
+                    $("#welCome2").hide();
+                    $("#welCome3").hide();
+                    $("#welCome4").hide();
+                    $("#QuizQuestions").hide(); 
+                    $("#clickMe2").hide(); 
+                    $("#clickMe3").hide();
+                    $("#clickMe4").hide();
+                    $("#clickMe5").hide();
+                    
+             $(document).ready(function(){   
+ 
+                function checktimer(){
+                    if(timer == 0){
+                        console.log("next question"); 
+                        $('#question').html(`<h1> ${questions[counter].question}</h1>`);
+                        
+                        $("#timer1").html(`<a>${questions[counter].ans3}</a>`);
+                        $("#timer2").html(`<a>${questions[counter].ans2}</a>`);
+                        $("#timer3").html(`<a>${questions[counter].ans1}</a>`);
+                        $("#timer").html(`Next Question`);
+                    }else{
+                      $("#question").text(timer/10000)
+                     $('#question').empty();
+                       
+                        $("#timer").html(timer/1000);
+                       // counter = counter + 1;
+                        setTimeout(checktimer,1000);
+                        timer = timer - 1000; 
+                        
+                    }  
+                }
+                
+                function quiz(i){
+                    
+                
+                            setTimeout(checktimer(),1000); 
+
+                }
+                
+$('#startquiz').click(function(){
+    
+    for(var i = 0; i < 4; i++); { 
+        $('#question').html(`<h1> ${questions[counter].question}</h1>`);
+
+                    
+        quiz(i);
+}
+});
+
+$('#clickMe').click(function(){
+    $("#welCome").show();
+    $("#clickMe2").show();
+        $("#Head1").hide();
+        $("#QuizQuestions").hide();
+        $("#clickMe").hide();
+        $(".Valkommen").hide();
+        $(".hq1").hide();
+});
+$('#clickMe2').click(function(){
+    $("#welCome").hide();
+        $("#Head1").hide();
+        $("#QuizQuestions").hide();
+        $("#clickMe").hide();
+        $("#clickMe2").hide();
+        $("#QuizQuestions").show();
+        $("#clickMe3").show();
+        $("#welCome2").show();
+
+});
+
+$('#clickMe3').click(function(){
+    $("#welCome").hide();
+        $("#Head1").hide();
+        $("#QuizQuestions").hide();
+        $("#clickMe").hide();
+        $("#clickMe2").hide();
+        $("#clickMe3").hide();
+        $("#QuizQuestions").hide();
+        $("#welCome2").hide();
+        $("#welCome3").show();
+        $("#clickMe4").show();
+});
+
+$('#clickMe4').click(function(){
+    $("#welCome").hide();
+        $("#Head1").hide();
+        $("#QuizQuestions").hide();
+        $("#clickMe").hide();
+        $("#clickMe2").hide();
+        $("#clickMe3").hide();
+        $("#QuizQuestions").hide();
+        $("#welCome2").hide();
+        $("#welCome3").hide();
+        $("#clickMe4").hide();
+        $("#welCome4").show();
+
+
+});
+
+
+
+            });
+                </script>
+
+</div>
+</body>
+
+
+</html>
