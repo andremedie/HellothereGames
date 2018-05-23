@@ -23,8 +23,7 @@ if(mysqli_num_rows($result) == 1){
 else{
 	echo "Just nu pågår inget quiz";
 }
-	
-	
+
 ?>
 
 <script>

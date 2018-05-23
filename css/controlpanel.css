@@ -1,0 +1,84 @@
+.control_q_container{
+	display:flex;
+	width:420px;
+	height:328px;
+	flex-wrap:wrap;
+	flex-direction:column;
+}
+.control_correct{
+	background-color:lightgreen;
+}
+.control_wrong{
+	background-color:#ff4c4c;
+}
+.control_question_text{
+	width:auto;
+	margin:5px;
+	height:25px;
+	line-height:25px;
+	text-align:center;
+	font-size:30px;
+}
+
+.control_start_question{
+	border:5px solid black;
+	border-radius:50px;
+	font-size:30px;
+	width:300px;
+	line-height:50px;
+	text-align:center;
+	background-color:red;
+}
+
+.control_start_question:hover{
+	background-color:yellow;
+	cursor:pointer;
+}
+#control_timer{
+	border:5px solid black;
+	border-radius:50px;
+	font-size:30px;
+	width:200px;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	background-color:green;
+}
+
+.control_alternative_text{
+	border:3px solid black;
+	border-radius:10px;
+	width:204px;
+	margin:5px;
+	height:25px;
+	line-height:25px;
+	text-align:center;
+	font-size:20px;
+}
+
+.control_q_name,.control_q_name_complete,.control_q_name_running{
+	border:3px solid black;
+	border-radius:10px;
+	width:204px;
+	margin:5px;
+	height:25px;
+	line-height:25px;
+	text-align:center;
+	font-size:20px;
+}
+.control_q_name_running{
+	background-color:blue;
+}
+.control_q_name_complete{
+	background-color:green;
+}
+.control_q_name_complete:hover{
+	cursor:pointer;
+}
+.control_q_name{
+	background-color:red;
+}
+.control_q_name:hover{
+	background-color:yellow;
+	cursor:pointer;
+}
