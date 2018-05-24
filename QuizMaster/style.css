@@ -14,11 +14,19 @@ body {
     padding-top: 300px;
 }
 
-#Head1 {
+#Head1{
     
     font-size: 142px;
     margin: 0px;
     padding: 0px;
+    
+}
+
+#weAreLive {
+    font-size: 52px;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 100px;
     
 }
 
@@ -106,7 +114,7 @@ body {
 
 input {
     text-align: center;
-    font-size: 42px;
+    font-size: 32px;
     border: black 1px solid;
 }
 
