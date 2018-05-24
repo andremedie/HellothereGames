@@ -26,7 +26,7 @@ $n = 0;
 	<h1>YOU ARE NOT LIVE YET!</h1>
 </div>
 <div class="control_live">
-	<span> GO LIVE </span>
+	<span> GO LIVE qwe </span>
 </div>
 
 <div id="control_current_q">

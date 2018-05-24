@@ -1,8 +1,12 @@
 
-var TOTAL_WIDTH = 150;
-var BORDER_WIDTH = 20;
-var FONT_SIZE = 60;
+var TOTAL_WIDTH = 250;
+var BORDER_WIDTH = 40;
+var FONT_SIZE = 90;
+var CONTAINER_WIDTH = 800;
 
+
+var bg_color = "white";
+var circle_color = "blue";
 
 var WIDTH = TOTAL_WIDTH / 2 - BORDER_WIDTH;
 var OVERLAY = 5;
@@ -14,7 +18,7 @@ document.getElementById("timerStyle").innerHTML=
 '	margin-left:2px;'+
 '	margin-top:2px;'+
 '	position:absolute;'+
-'	border:solid black;'+
+'	border:solid '+circle_color+';'+
 '	width:'+WIDTH+'px;'+
 '	height:'+WIDTH+'px;'+
 '}'+
@@ -45,7 +49,7 @@ document.getElementById("timerStyle").innerHTML=
 '}'+
 '#show1,#show2,#show3,#show4,#hidden1,#hidden2,#hidden3,#hidden4,#last_hidden{'+
 '	position:absolute;'+
-'	border:solid white;'+
+'	border:solid '+bg_color+';'+
 '	width:'+(WIDTH - OVERLAY / 2 )+'px;'+
 '	height:'+(WIDTH - OVERLAY / 2 )+'px;'+
 '}'+
@@ -79,7 +83,7 @@ document.getElementById("timerStyle").innerHTML=
 '	font-family:Verdana;'+
 '}'+
 '#timer{'+
-'	margin-left:200px;'+
-'	width:500px;'+
+'	margin:auto; ' +
+'	width:'+(TOTAL_WIDTH)+';'+
 '	height:'+(TOTAL_WIDTH)+'px;'+
 '}';

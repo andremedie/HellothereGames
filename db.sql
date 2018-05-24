@@ -7,7 +7,6 @@ CREATE TABLE question(
 	question_text text
 );
 
-
 CREATE TABLE alternative(
 	alternative_id int(8) PRIMARY KEY AUTO_INCREMENT,
 	alternative_question int(8),
@@ -15,7 +14,6 @@ CREATE TABLE alternative(
 	alternative_correct tinyint(1),
 	FOREIGN KEY (alternative_question) REFERENCES question(question_id)
 );
-
 
 INSERT INTO question (question_text) VALUES
 ("Where does Santa come from?"),
