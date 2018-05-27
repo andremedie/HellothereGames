@@ -48,8 +48,12 @@
 		<p> Container-Q is starting soon! </p>
 	</div>
 
-	<script>
+	<div id="screen5" class="hidden">
+		<p> We are LIVE! </p>
+		<p> Your question is coming soon! </p>
+	</div>
 
+	<script>
 	activateScreen1();
 
 	function activateScreen1(){
@@ -80,19 +84,32 @@
 			activateScreen4();
 		});
 	}
-
+	
 	function activateScreen4(){
 		$("#view").html($("#screen4").html());	
 		$("#screen4").html("");
-		setInterval(function(){		
-			$.ajax({url: "clientModel.php?action=check_status", success: function(result){
-				if(result == "true"){
+		$.ajax({url: "clientModel.php?action=get_time", success: function(result){
+			if(result < 0){
+				activateScreen5();
+			}
+			else{
+				setTimeout(function () {
 					activateScreen5();
-				}
-			}});		
-		},10000);
+				},result*1000);
+			}
+		}});
 	}
 
+	
+	function activateScreen5(){
+		$("#view").html($("#screen5").html());	
+		$("#screen5").html("");	
+		$.ajax({url: "clientModel.php?action=get_nickname", success: function(result){
+			//alert(result);
+			
+		}});
+	}
+	
 	</script>
 
 	</body>
