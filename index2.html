@@ -2,22 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style id="timerStyle"></style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="scripts/timerStyle.js"></script>
+    <script src="scripts/timer.js"></script>
+    <link rel="stylesheet" href="css/bg.css">
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/question.css">
     <title>MasterQuiz</title>
-    <script>
-</script>
+	
 </head>
 <body>
+	
+	<div id="bg">
+
+		<div id="blue_blob"></div>
+		<div id="purple_blob"></div>
+		<div id="yellow_blob"></div>
+		<div id="red_blob"></div>
+
+		<div id="inner_circle"></div>
+		<div id="middle_circle"></div>
+		<div id="outer_circle"></div>
+
+	</div>
 
     <div id="view">
+		
 	
 	
 	
 	</div>
+	
 	
 	<div id="screen1" class="hidden">
 		<p> Welcome to </p>
@@ -52,7 +70,36 @@
 		<p> We are LIVE! </p>
 		<p> Your question is coming soon! </p>
 	</div>
+	
+	<div id="screen6" class="hidden">
+	<div id="qContainer">
 
+	<div id="timer">
+		<div id="timer1" ></div>
+		<div id="last_hidden" ></div>
+		<div id="hidden_parts">
+			<div id="hidden2"></div>
+			<div id="hidden3"></div>
+			<div id="hidden4"></div>
+		</div>
+		<div id="timer2"></div>
+		<div id="timer3"></div>
+		<div id="timer4" ></div>
+		<div id="timer_text"></div>
+	</div>
+	
+	<div id="qText">This is a very very long question about something that is irrelevant just to try how it looks on the site. I dont think anyone will write a question this long though...</div>
+	<div id="qAlternatives">
+		<div id="qAlt1" onmousedown="chose(1)" >Alternative 1</div>
+		<div id="qAlt2" onmousedown="chose(2)" >Alternative 2</div>
+		<div id="qAlt3" onmousedown="chose(3)" >Alternative 3</div>
+	</div>
+
+</div>
+
+	</div>
+
+	
 	<script>
 	activateScreen1();
 
@@ -69,8 +116,8 @@
 		$("#screen2").html("");	
 		$('#button2').click(function(){
 			nickname = $("#nickname").val();
-			if(nickname == "")
-				return;
+//if(nickname == "")
+//return;
 			$.ajax({url: "clientModel.php?action=set_nickname&value="+nickname, success: function(result){
 				activateScreen3();
 			}});
@@ -100,16 +147,34 @@
 		}});
 	}
 
-	
+	var interval;
 	function activateScreen5(){
 		$("#view").html($("#screen5").html());	
 		$("#screen5").html("");	
-		$.ajax({url: "clientModel.php?action=get_nickname", success: function(result){
-			//alert(result);
+		setInterval( function () {
+		
+		$.ajax({url: "clientModel.php?action=get_status", success: function(result){
+		
 			
-		}});
+			if(result == "QUESTION_IN_PROGRESS"){
+				activateQuestion();
+			}
+		
+		}});	
+		
+		},500);
 	}
 	
+	function activateQuestion(number){
+		$.ajax({url: "clientModel.php?action=get_question&value", success: function(result){
+		
+			if(result != "NO_QUESTION_ACTIVE"){
+				activateQuestion(result);
+			}
+		
+		}});	
+	}	
+
 	</script>
 
 	</body>

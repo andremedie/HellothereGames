@@ -12,27 +12,8 @@ if(isset($_GET['action'])){
 	else if($_GET['action'] == "get_nickname" && isset($_SESSION['nickname'])){
 		echo $_SESSION['nickname'];	
 	}
-	else if($_GET['action'] == "check_status"){
-
-		date_default_timezone_set("America/New_York");
-		$date =  date("y-m-d");
-		$time =  intval(date("hi"));
-		$am = date("a");
-		if($date == "18-05-27" && $am == "am" && ($time < $d_time && $time >= 855)){
-			echo "countdown-in-progress";
-		}
-		else if($date == "18-05-27" && $am == "am" && ($time >= $d_time)){
-			echo "we-are-live";
-		}
-		else{
-			echo "sit-tight" . $time;
-		}
-		
-	}
-	else if($_GET['action'] == "get_time"){
-		
-		 echo time_left();
-		 
+	else if($_GET['action'] == "get_time"){		
+		echo time_left();
 	}
 	else{
 		http_response_code(400);
