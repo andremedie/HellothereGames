@@ -4,6 +4,7 @@ USE quiz;
 CREATE TABLE question(
 	question_id int(8) PRIMARY KEY AUTO_INCREMENT,
 	question_status enum("NOT STARTED","RUNNING","COMPLETE") default "NOT STARTED",
+	question_started timestamp null DEFAULT null,
 	question_text text
 );
 

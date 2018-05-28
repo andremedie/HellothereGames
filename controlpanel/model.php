@@ -87,7 +87,7 @@ else if(isset($_GET['start_question'])){
 	$quid = $_GET['start_question'];
 	$query = "SELECT * FROM question WHERE question_status='RUNNING'";
 	if(mysqli_num_rows(mysqli_query($dbc,$query)) == 0){
-		$query = "UPDATE question SET question_status = 'RUNNING' WHERE question_id = $quid;";
+		$query = "UPDATE question SET question_status = 'RUNNING' , question_started = current_timestamp WHERE question_id = $quid;";
 		$result = mysqli_query($dbc,$query);		
 	}
 	else{

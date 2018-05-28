@@ -1,3 +1,17 @@
+
+
+function chose(alt){
+	if(n < 10000){
+		$("#qAlt1").css('background-color',"white");
+		$("#qAlt2").css('background-color',"white");
+		$("#qAlt3").css('background-color',"white");
+		
+		$("#qAlt"+alt).css('background-color',"blue");
+	}
+}
+
+
+function startTimer(){
 $("#hidden4").show();
 $("#hidden3").hide();
 $("#hidden2").hide();
@@ -12,15 +26,6 @@ var timer_text  = "<div id='timer_text'></div>";
 
 var n = 0;
 
-function chose(alt){
-	if(n < 10000){
-		$("#qAlt1").css('background-color',"white");
-		$("#qAlt2").css('background-color',"white");
-		$("#qAlt3").css('background-color',"white");
-		
-		$("#qAlt"+alt).css('background-color',"blue");
-	}
-}
 
 var timer = setInterval(function(){
 
@@ -66,3 +71,5 @@ var timer = setInterval(function(){
 	$("#hidden_parts").css("transform","rotate("+deg+"deg)");
 	
 },10);
+
+}

@@ -1,12 +1,12 @@
 
 var TOTAL_WIDTH = 250;
-var BORDER_WIDTH = 40;
+var BORDER_WIDTH = 15;
 var FONT_SIZE = 90;
 var CONTAINER_WIDTH = 800;
 
 
 var bg_color = "white";
-var circle_color = "blue";
+var circle_color = "#EF5D56";
 
 var WIDTH = TOTAL_WIDTH / 2 - BORDER_WIDTH;
 var OVERLAY = 5;
@@ -16,7 +16,7 @@ document.getElementById("timerStyle").innerHTML=
 '#timer1,#timer2,#timer3,#timer4{'+
 '	background-color:;'+
 '	margin-left:2px;'+
-'	margin-top:2px;'+
+'	margin-top:2px;'+ 
 '	position:absolute;'+
 '	border:solid '+circle_color+';'+
 '	width:'+WIDTH+'px;'+
@@ -83,7 +83,7 @@ document.getElementById("timerStyle").innerHTML=
 '	font-family:Verdana;'+
 '}'+
 '#timer{'+
-'	margin:auto; ' +
-'	width:'+(TOTAL_WIDTH)+';'+
+'	margin:auto;' +
+'	width:'+(TOTAL_WIDTH)+'px;'+
 '	height:'+(TOTAL_WIDTH)+'px;'+
 '}';

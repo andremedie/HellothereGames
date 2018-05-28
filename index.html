@@ -70,41 +70,18 @@
 		<p> Your question is coming soon! </p>
 	</div>
 	
-	<div id="screen6" class="hidden">
-	<div id="qContainer">
-
-	<div id="timer">
-		<div id="timer1" ></div>
-		<div id="last_hidden" ></div>
-		<div id="hidden_parts">
-			<div id="hidden2"></div>
-			<div id="hidden3"></div>
-			<div id="hidden4"></div>
-		</div>
-		<div id="timer2"></div>
-		<div id="timer3"></div>
-		<div id="timer4" ></div>
-		<div id="timer_text"></div>
-	</div>
 	
-	<div id="qText">This is a very very long question about something that is irrelevant just to try how it looks on the site. I dont think anyone will write a question this long though...</div>
-	<div id="qAlternatives">
-		<div id="qAlt1" onmousedown="chose(1)" >Alternative 1</div>
-		<div id="qAlt2" onmousedown="chose(2)" >Alternative 2</div>
-		<div id="qAlt3" onmousedown="chose(3)" >Alternative 3</div>
-	</div>
-
-</div>
-
-	</div>
 
 	
-	<script src="scripts/timerStyle.js"></script>
     <script src="scripts/timer.js"></script>
+	<script src="scripts/timerStyle.js"></script>
     <script src="scripts/bg.js"></script>
 	
 	<script>
 	activateScreen1();
+
+//	replace_blobs();
+//	getQuestion();
 
 	function activateScreen1(){
 		replace_blobs();
@@ -121,8 +98,9 @@
 		$("#screen2").html("");	
 		$('#button2').click(function(){
 			nickname = $("#nickname").val();
-//if(nickname == "")
-//return;
+			if(nickname == ""){
+				//return;
+			}
 			$.ajax({url: "clientModel.php?action=set_nickname&value="+nickname, success: function(result){
 				activateScreen3();
 			}});
@@ -159,29 +137,41 @@
 		replace_blobs();
 		$("#view").html($("#screen5").html());	
 		$("#screen5").html("");	
-		setInterval( function () {
+		setTimeout(function () {
 		
-		$.ajax({url: "clientModel.php?action=get_status", success: function(result){
-		
-			
+			$.ajax({url: "clientModel.php?action=get_status", success: function(result){
 			if(result == "QUESTION_IN_PROGRESS"){
-				activateQuestion();
+				getQuestion();
 			}
+		
+		}});
+		},1000);
+		
+	}
+
+	function askForQuestion(){
+		setInterval( function () {
+		$.ajax({url: "clientModel.php?action=get_question", success: function(result){
+		
+				
+
+
 		
 		}});	
 		
 		},500);
+
 	}
-	
-	function activateQuestion(number){
-		$.ajax({url: "clientModel.php?action=get_question&value", success: function(result){
-		
-			if(result != "NO_QUESTION_ACTIVE"){
-				activateQuestion(result);
-			}
-		
+
+	function getQuestion(){
+		$.ajax({url: "clientModel.php?action=get_question", success: function(result){
+			$("#view").html(result);
+			startTimer();
 		}});	
 	}	
+
+
+	
 
 	</script>
 

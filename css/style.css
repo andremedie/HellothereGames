@@ -7,6 +7,10 @@ p{
 	margin:0px;
 }
 
+.logo{
+	background:url("/hellotheregames/bg/logo.svg") no-repeat center;
+}
+
 body {
 	margin:0px;
 	top:0;

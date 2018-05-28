@@ -15,6 +15,56 @@ if(isset($_GET['action'])){
 	else if($_GET['action'] == "get_time"){		
 		echo time_left();
 	}
+	else if($_GET['action'] == "get_status"){		
+
+		$query = "SELECT * FROM question WHERE question_status = 'RUNNING';";
+
+		if(mysqli_num_rows(mysqli_query($dbc,$query)) == 1 ){
+			echo "QUESTION_IN_PROGRESS";
+		}
+
+	}
+	else if($_GET['action'] == "get_question"){		
+
+		$query = "SELECT * FROM question JOIN alternative ON question_id=alternative_question WHERE question_status = 'RUNNING';";
+		$text = mysqli_fetch_array(mysqli_query($dbc,$query))['question_text'];
+		$result = mysqli_query($dbc,$query);
+		?>
+		<div id="qScreen">
+			<div id="qLogo" class="logo"> </div>
+			<div id="qContainer">
+
+				<div id="timer">
+					<div id="timer1" ></div>
+					<div id="last_hidden" ></div>
+					<div id="hidden_parts">
+						<div id="hidden2"></div>
+						<div id="hidden3"></div>
+						<div id="hidden4"></div>
+					</div>
+					<div id="timer2"></div>
+					<div id="timer3"></div>
+					<div id="timer4"></div>
+					<div id="timer_text"></div>
+				</div>
+				
+				<div id="qText"><?php echo $text; ?></div>
+				<div id="qAlternatives">
+				<?php
+				$n = 0;
+				while($row = mysqli_fetch_array($result)){ $n++;
+					?>
+					<div id="qAlt<?php echo $n; ?>" onmousedown="chose(<?php echo $n; ?>)"><?php echo $row['alternative_text']; ?></div>
+					<?php
+				}
+				?>
+				</div>
+
+			</div>
+
+		</div>
+		<?php
+	}
 	else{
 		http_response_code(400);
 	}
@@ -22,6 +72,7 @@ if(isset($_GET['action'])){
 else{
 	http_response_code(400);
 }
+
 
 function time_left(){
 	
@@ -47,10 +98,4 @@ function time_left(){
 		return -($dd+$hh+$mm+$ss);		
 	}
 }
-	
-	
-
-
-
 ?>
-
