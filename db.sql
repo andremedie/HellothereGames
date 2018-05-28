@@ -101,3 +101,6 @@ INSERT INTO alternative (alternative_question,alternative_text,alternative_corre
 (16,"Alternativ3",0);
 
 
+UPDATE question SET question_status = "RUNNING" WHERE question_id = 1;
+
+
