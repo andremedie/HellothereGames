@@ -34,60 +34,6 @@ body {
 	display:none;
 }
 
-@keyframes rotate {
-    0%   {transform:rotate(0deg);}
-    100% {transform:rotate(360deg);}
-}
-
-#inner_circle{
-	z-index:-1;
-	position:fixed;
-	width:80%;
-	height:100%;
-	background:url("/hellotheregames/bg/inner_circle.svg") no-repeat center;
-	margin:auto;
-	left: 0;
-	right: 0;
-	
-	animation-name: rotate;
-    animation-duration: 40s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-
-#middle_circle{
-	z-index:-1;
-	position:fixed;
-	width:120%;
-	height:100%;
-	background:url("/hellotheregames/bg/middle_circle.svg") no-repeat center;
-	margin:auto;
-	left: 0;
-	right: 0;
-	margin-left:-10%;
-	animation-name: rotate;
-    animation-duration: 40s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: reverse;
-}
-
-#outer_circle{
-	z-index:-1;
-	position:fixed;
-	width:160%;
-	height:100%;
-	background:url("/hellotheregames/bg/outer_circle.svg") no-repeat center;
-	margin:auto;
-	left: 0;
-	right: 0;
-	margin-left:-30%;
-	animation-name:rotate ;
-    animation-duration: 40s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
 
 input{
 	border-radius:1em;

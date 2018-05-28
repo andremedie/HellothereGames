@@ -1,23 +1,22 @@
 @keyframes rotate {
     0%   {transform:rotate(0deg);}
-    100% {transform:rotate(360deg);}
+    100%  {transform:rotate(360deg);}
 }
 
 #inner_circle,#middle_circle,#outer_circle{
 	position:fixed;
-	z-index:-2;
+	z-index:-1;
 	height:100%;
 	margin:auto;
 	left: 0;
 	right: 0;
-	
 	animation-name: rotate;
-    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
 #inner_circle{
+    animation-duration: 50s;
 	width:80%;
 	background:url("/hellotheregames/bg/inner_circle.svg") no-repeat center;
 }
@@ -28,45 +27,33 @@
 	background:url("/hellotheregames/bg/middle_circle.svg") no-repeat center;
 	margin-left:-10%;
     animation-direction: reverse;
+    animation-duration: 80s;
 }
 
 #outer_circle{
 	width:160%;
 	background:url("/hellotheregames/bg/outer_circle.svg") no-repeat center;
 	margin-left:-30%;
+    animation-duration: 120s;
 }
 
 #red_blob,#blue_blob,#yellow_blob,#purple_blob{
-	z-index:-1;
+	z-index:-2;
 	position:fixed;
-	width:65%;
 }
 
 #red_blob{
-	padding-top:100%;
-	margin-left:-40%;	
-	margin-top:-40%;
 	background:url("/hellotheregames/bg/red_blob.svg") no-repeat center;
 }
 
 #blue_blob{
-	padding-top:100%;
-	margin-left:70%;
-	margin-top:-35%;
 	background:url("/hellotheregames/bg/blue_blob.svg") no-repeat center;
 }
 
 #yellow_blob{
-	padding-top:100%;
-	margin-left:-40%;
-	margin-top:60%;	
-	transform:rotate(-20deg);
 	background:url("/hellotheregames/bg/yellow_blob.svg") no-repeat center;
 }
 
 #purple_blob{
-	padding-top:100%;
-	margin-left:70%;
-	margin-top:80%;	
 	background:url("/hellotheregames/bg/purple_blob.svg") no-repeat center;
 }
