@@ -21,7 +21,6 @@
 	background:url("/hellotheregames/bg/inner_circle.svg") no-repeat center;
 }
 
-
 #middle_circle{
 	width:120%;
 	background:url("/hellotheregames/bg/middle_circle.svg") no-repeat center;
@@ -56,4 +55,27 @@
 
 #purple_blob{
 	background:url("/hellotheregames/bg/purple_blob.svg") no-repeat center;
+}
+
+@keyframes map {
+    0%   {transform:rotate(0deg);margin-top:-75%;margin-left:-75%;}
+    25%   {transform:rotate(180deg);margin-top:-90%;margin-left:-90%;}
+    50%   {transform:rotate(360deg);margin-top:-75%;margin-left:-75%;}
+    75%   {transform:rotate(540deg);margin-top:-60%;margin-left:-60%;}
+    100%  {transform:rotate(720deg);margin-top:-75%;margin-left:-75%;}
+}
+
+#map{
+	position:fixed;
+	z-index:-3;
+	margin:auto;
+	left: 0;
+	right: 0;
+	background:url("/hellotheregames/bg/map.svg") no-repeat center;
+	width:200%;
+	height:200%;
+	animation-name: map;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 400s;
 }
