@@ -2,66 +2,108 @@ html {
     height: 100%;
     width: 100%;
 }
+
+p{
+	margin:0px;
+}
+
 body {
+	margin:0px;
+	top:0;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     text-align: center;
-}
-
-.Valkommen {
-    font-size: 105px;
-    margin: 0px;
-    padding: 0px;
-    padding-top: 400px;
-}
-
-#Head1 {
-    
-    font-size: 142px;
-    margin: 0px;
-    padding: 0px;
-    
-}
-
-
-#clickMe , #clickMe2 , #clickMe3 , #clickMe4{
-    font-size: 30px;
-    color: #218fbf;
-    text-align: center;
-    padding: 0px;
-    padding-top: 3rem;
-    bottom: 0; right: 0; 
-
-    
-     -webkit-column-count: 1; /* Chrome, Safari, Opera */
-     -moz-column-count: 1; /* Firefox */
-     column-count: 1;
- 
-     -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-     -moz-column-gap: 40px; /* Firefox */
-     column-gap: 30px;
- 
-}
-
-.inputName {
-    font-size: 90px;
-}
-
-#startquiz {
-   
-    font-size: 200px;
-}
-
-input {
-    text-align: center;
-    font-size: 42px;
-    border: black 1px solid;
-}
-
-
-/* .ramen {
+    height: 100%;
     width: 100%;
-} */
-
-#welCome , #welCome2 , #welCome3 , #welCome4 {
-    font-size: 56px;
+	background-color:#0074BB;
 }
+
+#view{
+	width:100%;
+	height:100%;
+	background-color:transparent;
+	z-index:5;
+}
+
+#view p{
+	padding:50px;
+	color:white;
+	font-size:50px;
+}
+
+.hidden{
+	display:none;
+}
+
+@keyframes rotate {
+    0%   {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+
+#inner_circle{
+	z-index:-1;
+	position:fixed;
+	width:80%;
+	height:100%;
+	background:url("/hellotheregames/bg/inner_circle.svg") no-repeat center;
+	margin:auto;
+	left: 0;
+	right: 0;
+	
+	animation-name: rotate;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+#middle_circle{
+	z-index:-1;
+	position:fixed;
+	width:120%;
+	height:100%;
+	background:url("/hellotheregames/bg/middle_circle.svg") no-repeat center;
+	margin:auto;
+	left: 0;
+	right: 0;
+	margin-left:-10%;
+	animation-name: rotate;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+#outer_circle{
+	z-index:-1;
+	position:fixed;
+	width:160%;
+	height:100%;
+	background:url("/hellotheregames/bg/outer_circle.svg") no-repeat center;
+	margin:auto;
+	left: 0;
+	right: 0;
+	margin-left:-30%;
+	animation-name:rotate ;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+input{
+	border-radius:1em;
+	font-size:50px;
+	line-height:100px;
+	text-align:center;
+	width:80%;
+}
+.button{
+	margin: auto;
+	position:absolute;
+	bottom: 5%;
+    font-size: 1em;
+    color: #218fbf;
+	left: 0;
+	right: 0;
+	color:white;
+}
+
