@@ -2,19 +2,21 @@ html {
     height: 100%;
     width: 100%;
 }
-
-p{
-	margin:0px;
-}
-
 .logo{
 	background:url("/hellotheregames/bg/logo.svg") no-repeat center;
+	
 }
+p{
+	margin:0px;
+	font-family: 'Comfortaa', cursive;
+	color:white;
+	font-size:50px;
+}
+
 
 body {
 	margin:0px;
 	top:0;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     text-align: center;
     height: 100%;
     width: 100%;
@@ -28,24 +30,12 @@ body {
 	z-index:5;
 }
 
-#view p{
-	padding:50px;
-	color:white;
-	font-size:50px;
-}
 
 .hidden{
 	display:none;
 }
 
 
-input{
-	border-radius:1em;
-	font-size:50px;
-	line-height:100px;
-	text-align:center;
-	width:80%;
-}
 .button{
 	margin: auto;
 	position:absolute;

@@ -45,16 +45,16 @@ if(isset($_GET['action'])){
 					<div id="timer2"></div>
 					<div id="timer3"></div>
 					<div id="timer4"></div>
-					<div id="timer_text"></div>
+					<p id="timer_text"></p>
 				</div>
 				
-				<div id="qText"><?php echo $text; ?></div>
+				<p id="qText"><?php echo $text; ?></p>
 				<div id="qAlternatives">
 				<?php
 				$n = 0;
 				while($row = mysqli_fetch_array($result)){ $n++;
 					?>
-					<div id="qAlt<?php echo $n; ?>" onmousedown="chose(<?php echo $n; ?>)"><?php echo $row['alternative_text']; ?></div>
+					<p id="qAlt<?php echo $n; ?>" onmousedown="chose(<?php echo $n; ?>)"><?php echo $row['alternative_text']; ?></p>
 					<?php
 				}
 				?>
@@ -77,7 +77,7 @@ else{
 function time_left(){
 	
 	$d_day_str = "2018-06-12 09:00am";
-	$d_day = date_create('2018-05-27 3:38:30pm');
+	$d_day = date_create('2018-05-29 6:11:30pm');
 	$now = new DateTime();
 	$diff = date_diff($d_day, $now);
 	

@@ -1,9 +1,7 @@
-
-var TOTAL_WIDTH = 250;
-var BORDER_WIDTH = 15;
-var FONT_SIZE = 90;
+var TOTAL_WIDTH = 180;
+var BORDER_WIDTH = 20;
+var FONT_SIZE = 80;
 var CONTAINER_WIDTH = 800;
-
 
 var bg_color = "white";
 var circle_color = "#EF5D56";
@@ -13,14 +11,14 @@ var OVERLAY = 5;
 var BIG_BORDER_WIDTH = BORDER_WIDTH + OVERLAY;
 
 document.getElementById("timerStyle").innerHTML=
-'#timer1,#timer2,#timer3,#timer4{'+
-'	background-color:;'+
-'	margin-left:2px;'+
-'	margin-top:2px;'+ 
-'	position:absolute;'+
-'	border:solid '+circle_color+';'+
-'	width:'+WIDTH+'px;'+
-'	height:'+WIDTH+'px;'+
+'#timer1,#timer2,#timer3,#timer4{' +
+'	background-color:;' +
+'	margin-left:2px;' +
+'	margin-top:2px;' + 
+'	position:absolute;' +
+'	border:solid '+circle_color+';' +
+'	width:'+WIDTH+'px;' +
+'	height:'+WIDTH+'px;' +
 '}'+
 '#timer1{'+
 '	margin-left:'+(WIDTH+BORDER_WIDTH)+'px;'+
@@ -79,6 +77,7 @@ document.getElementById("timerStyle").innerHTML=
 '	height:'+(TOTAL_WIDTH)+'px;'+
 '	line-height:'+(TOTAL_WIDTH)+'px;'+
 '	text-align:center;'+
+'	color:#0074BB;'+
 '	font-size:'+(FONT_SIZE)+'px;'+
 '	font-family:Verdana;'+
 '}'+

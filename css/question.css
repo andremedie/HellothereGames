@@ -1,12 +1,15 @@
+#qScreen{
+	padding-top:10%;
+}
+
 #qLogo{
 	margin:auto;
-	width:50%;
-	padding-top:25%;
-	margin-top:5%;
+	width:40%;
+	padding-top:20%;
 }
 
 #qContainer{
-	padding-top:5%;
+	padding-top:2%;
 	background-color:white;
 	border-radius:50px;
 	margin:auto;
@@ -18,8 +21,14 @@
 }	
 #qContainer{
 	color:#0074BB;
-	
 }	
+
+#qText{
+	color:#0074BB;
+	font-size:60px;
+	margin-top:2%;
+	height:4em;
+}
 
 #qAlt1,#qAlt2,#qAlt3{
 	border-radius:120px;
@@ -29,4 +38,5 @@
 	margin:auto;
 	margin-top:5%;
 	border:0.1em solid #0074BB;
+	color:#0074BB;
 }

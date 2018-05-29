@@ -2,16 +2,16 @@ function replace_blobs(){
 
 	rnd_width = Math.random()*30+40;
 	rnd_height = Math.random()*30+40;
-	$("#yellow_blob").css("width",rnd_width+"%");
-	$("#yellow_blob").css("height",rnd_height+"%");
+	$("#red_blob").css("width",rnd_width+"%");
+	$("#red_blob").css("height",rnd_height+"%");
 
-	rnd_left = -$("#yellow_blob").width()/2;
-	rnd_top = -$("#yellow_blob").height()/2;
-	$("#yellow_blob").css("margin-left",rnd_left+"px");
-	$("#yellow_blob").css("margin-top",rnd_top+"px");
+	rnd_left = -$("#red_blob").width()/2;
+	rnd_top = -$("#red_blob").height()/2;
+	$("#red_blob").css("margin-left",rnd_left+"px");
+	$("#red_blob").css("margin-top",rnd_top+"px");
 
 	rnd_deg = -Math.random()*30;
-	$("#yellow_blob").css("transform","rotate("+rnd_deg+"deg)");
+	$("#red_blob").css("transform","rotate("+rnd_deg+"deg)");
 
 
 
@@ -32,16 +32,16 @@ function replace_blobs(){
 
 	rnd_width = Math.random()*30+40;
 	rnd_height = Math.random()*30+40;
-	$("#red_blob").css("width",rnd_width+"%");
-	$("#red_blob").css("height",rnd_height+"%");
+	$("#yellow_blob").css("width",rnd_width+"%");
+	$("#yellow_blob").css("height",rnd_height+"%");
 
-	rnd_left = -$("#red_blob").width()/2;
-	rnd_top = $("#view").height()-$("#red_blob").height()*0.8;
-	$("#red_blob").css("margin-left",rnd_left+"px");
-	$("#red_blob").css("margin-top",rnd_top+"px");
+	rnd_left = -$("#yellow_blob").width()/2;
+	rnd_top = $("#view").height()-$("#yellow_blob").height()*0.8;
+	$("#yellow_blob").css("margin-left",rnd_left+"px");
+	$("#yellow_blob").css("margin-top",rnd_top+"px");
 
 	rnd_deg = -Math.random()*20-20;
-	$("#red_blob").css("transform","rotate("+rnd_deg+"deg)");
+	$("#yellow_blob").css("transform","rotate("+rnd_deg+"deg)");
 
 
 

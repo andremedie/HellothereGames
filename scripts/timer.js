@@ -17,6 +17,7 @@ function chose(alt){
 
 
 function startTimer(){
+	n = 0;
 	$("#hidden4").show();
 	$("#hidden3").hide();
 	$("#hidden2").hide();
@@ -61,9 +62,19 @@ function startTimer(){
 		
 		if(n >= 10000){
 			width = $("#qContainer").width();
-			$("#timer_text").css("width",width+"px");
+			$("#timer_text").css("width","60%");
 			$("#timer").css("margin","0px");
-			$("#timer_text").html("time's up");		
+			$("#timer_text").html("Time's Up!");		
+			$("#timer_text").css("background-color","#EF5D56");		
+			$("#timer_text").css("border-radius","10em");		
+			$("#timer_text").css("color","white");		
+			$("#timer_text").css("height","120px");	
+			$("#timer_text").css("line-height","120px");
+			$("#timer_text").css("left","0");
+			$("#timer_text").css("right","0");
+			$("#timer_text").css("margin","auto");
+			$("#timer_text").css("margin-top","30px");
+			$("#timer_text").css("font-family","'Comfortaa'");
 			clearInterval(timer);
 		}
 		else{

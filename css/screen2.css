@@ -1,0 +1,36 @@
+#screen2_logo{
+	margin:auto;
+	width:36%;
+	padding-top:20em;
+}
+
+#p_21{
+	word-break: break-word;
+	margin-top:0em;
+	font-size:50px;
+}
+#p_22{
+	word-break: break-word;
+	padding-top:1 	em;
+	font-size:50px;
+}
+#p_23{
+	word-break: break-word;
+	padding-top:1em;
+	font-size:50px;
+}
+#p_24{
+	word-break: break-word;
+	padding-top:1em;
+	font-size:50px;
+}
+
+
+#nick_input{
+	margin-top:5%;
+	border-radius:1em;
+	font-size:50px;
+	line-height:100px;
+	text-align:center;
+	width:80%;
+}

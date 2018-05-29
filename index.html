@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style id="timerStyle"></style>
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/bg.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/question.css">
-    <title>MasterQuiz</title>
+    <link rel="stylesheet" href="css/screen1.css">
+    <link rel="stylesheet" href="css/screen2.css">
+    <link rel="stylesheet" href="css/screen3.css">
+    <link rel="stylesheet" href="css/screen4.css">
+    <link rel="stylesheet" href="css/screen5.css">
+   <title>MasterQuiz</title>
 	
 </head>
 <body>
@@ -32,56 +38,56 @@
 		
 	
 	
-	
 	</div>
 	
-	
 	<div id="screen1" class="hidden">
-		<p> Welcome to </p>
-		<p> Container-Q </p>
-		<div id="button1" class="button" ><i class="fas fa-chevron-circle-right fa-10x"></i></div>
+		<p id="p_11"> welcome to </p>
+		<p id="p_12"> CONTAINER-Q </p>
+		<div id="screen1_logo" class="logo"> </div>
+		<div id="button1" class="button"><i class="fas fa-chevron-circle-right fa-10x"></i></div>
 	</div>
 	
 	<div id="screen2" class="hidden">
-		<p>Ready for your   Containerization Journey!?</p>
-		<p>Find out with our LIVE   trivia throw-down   to open Dockerdon!!</p>
-		<p>Iternal fame and epic swag   hang in the balance!!!</p>
-		<p>Create your nickname   to get started:</p>
-		<input class="inputName" id="nickname" placeholder="SuperSteve27"></input>
+		<div id="screen2_logo" class="logo"> </div>
+		<p id="p_21"> Ready for your Containerization Journey!? </p>
+		<p id="p_22"> Find out with our LIVE trivia throw-down to open Dockerdon!! </p>
+		<p id="p_23"> Iternal fame and epic swag hang in the balance!!! </p>
+		<p id="p_24"> Create your nickname and hit enter: </p>
+		<input id="nick_input" placeholder="SuperSteve27"> </input>
 		<div id="button2" class="button"><i class="fas fa-chevron-circle-right fa-10x"></i></div>
 	</div>
 
 	<div id="screen3" class="hidden">
-		<p> Here's how it works: </p>
-		<p> Our host will introduce 16, progressevly harder questions. </p>
-		<p> You'll get 11 seconds to answer because we're dialing it up to... 11. </p>
-		<p> Get it wrong and you're done, get it right and move on. </p>
-		<p> Get everything right and REIGN SUPREME as a Docker Container-Q Champion!!! </p>
+		<div id="screen3_logo" class="logo"> </div>
+		<p id="p_31"> Here's how it works: </p>
+		<p id="p_32"> Our host will introduce 16, progressevly harder questions. </p>
+		<p id="p_33"> You'll get 11 seconds to answer because we're dialing it up to... 11. </p>
+		<p id="p_34"> Get it wrong and you're done, get it right and move on. </p>
+		<p id="p_35"> Get everything right and REIGN SUPREME as a Docker Container-Q Champion!!! </p>
 		<div id="button3" class="button"><i class="fas fa-chevron-circle-right fa-10x"></i></div>
 	</div>
 
 	<div id="screen4" class="hidden">
-		<p> Sit tight! </p>
-		<p> Container-Q is starting soon! </p>
+		<div id="screen4_logo" class="logo"> </div>
+		<p id="p_41"> Sit tight! </p>
+		<p id="p_42"> Container-Q is <br> starting soon! </p>
 	</div>
 
 	<div id="screen5" class="hidden">
-		<p> We are LIVE! </p>
-		<p> Your question is coming soon! </p>
+		<div id="screen5_logo" class="logo"> </div>
+		<p id="p_51"> We are LIVE! </p>
+		<p id="p_52"> Your question is coming soon! </p>
 	</div>
-	
-	
-
 	
     <script src="scripts/timer.js"></script>
 	<script src="scripts/timerStyle.js"></script>
     <script src="scripts/bg.js"></script>
 	
 	<script>
-	activateScreen1();
+//	activateScreen1();
 
-//	replace_blobs();
-//	getQuestion();
+	replace_blobs();
+	getQuestion();
 
 	function activateScreen1(){
 		replace_blobs();
@@ -122,12 +128,18 @@
 		$("#screen4").html("");
 		$.ajax({url: "clientModel.php?action=get_time", success: function(result){
 			if(result < 0){
-				activateScreen5();
+
+				setTimeout(function () {
+					activateScreen5();
+				},5000);
+
+
+//				activateScreen5();
 			}
 			else{
 				setTimeout(function () {
 					activateScreen5();
-				},result*2000);
+				},result*1000);
 			}
 		}});
 	}
@@ -145,7 +157,7 @@
 			}
 		
 		}});
-		},1000);
+		},5000);
 		
 	}
 
