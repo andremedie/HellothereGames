@@ -28,8 +28,6 @@ function replace_blobs(){
 	rnd_deg = Math.random()*20;
 	$("#purple_blob").css("transform","rotate("+rnd_deg+"deg)");
 
-
-
 	rnd_width = Math.random()*30+40;
 	rnd_height = Math.random()*30+40;
 	$("#yellow_blob").css("width",rnd_width+"%");
@@ -42,9 +40,6 @@ function replace_blobs(){
 
 	rnd_deg = -Math.random()*20-20;
 	$("#yellow_blob").css("transform","rotate("+rnd_deg+"deg)");
-
-
-
 
 	rnd_width = Math.random()*10+50;
 	rnd_height = Math.random()*10+50;

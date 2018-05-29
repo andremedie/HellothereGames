@@ -65,6 +65,16 @@ if(isset($_GET['action'])){
 		</div>
 		<?php
 	}
+	else if($_GET['action'] == "set_answer" && isset($_GET['value'])){		
+		$_SESSION['answer'] = $_GET['value'];
+	}
+	else if($_GET['action'] == "get_answer"){		
+
+		$query = "SELECT * FROM question JOIN alternatives ON question_id = alternative_question WHERE question_status = 'COMPLETE' ORDER BY question_start DESC LIMIT 1;";
+		
+		$result = mysqli_query($dbc,$query);
+
+	}
 	else{
 		http_response_code(400);
 	}
